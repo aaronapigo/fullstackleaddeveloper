@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<!-- the above Mark of the Web lets IE run this page in the Internet security zone,
+     avoiding the permission prompt for running active content such as JavaScript -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <base target="_blank">
+</head>
+<script src="~/Scripts/Home/Search.js"></script>
+<body onload="document.forms.bing.query.focus();">
+
+    <form name="bing" onsubmit="this.offset.value = 0; return bingWebSearch(this.query.value,
+    bingSearchOptions(this), checkSubscriptionKey())">
+
+        <div id="query">
+            <!-- query controls including search field and options -->
+            <h1>
+                Bing Web Search API demo</h2>
+
+                <input type="text" name="query" id="term" placeholder="Search the Web" autocomplete=off>
+
+                <p>
+                    Promote
+                    <input type=checkbox name="what" id="webpages" value="webpages">
+                    <label for="webpages">Web pages</label>
+                    <input type=checkbox name="what" id="news" value="news">
+                    <label for="news">News</label>
+                    <input type=checkbox name="what" id="images" value="images">
+                    <label for="images">Images</label>
+                    <input type=checkbox name="what" id="videos" value="videos">
+                    <label for="videos">Videos</label>
+
+                    &nbsp;&nbsp;&nbsp;From
+                    <select name="when">
+                        <option value="" selected>All time</option>
+                        <option value="month">Past month</option>
+                        <option value="week">Past week</option>
+                        <option value="day">Last 24 hours</option>
+                    </select>
+
+                    &nbsp;&nbsp;&nbsp;<input type=checkbox id="safe" name="safe" value="on" checked><label for="safe">SafeSearch</label>
+
+                    <!-- these hidden fields control paging -->
+                    <input type=hidden name="count" value="25">
+                    <input type=hidden name="offset" value="0">
+
+    </form>
+
+    </div>
+    <div id="error">
+        <h2>Error</h2>
+        <div id="_error">
+        </div>
+    </div>
+
+    <h2>Results</h2>
+    <div id="paging1">
+        <div id="_paging1"></div>
+    </div>
+
+    <div id="noresults">
+        <div id="_noresults">None yet.</div>
+    </div>
+
+    <div id="sidebar">
+        <div id="_sidebar"></div>
+    </div>
+
+    <div id="pole">
+        <div id="_pole"></div>
+    </div>
+
+    <div id="mainline">
+        <div id="_mainline"></div>
+    </div>
+
+    <div id="paging2">
+        <div id="_paging2"></div>
+    </div>
+
+    
+</body>
+</html>
