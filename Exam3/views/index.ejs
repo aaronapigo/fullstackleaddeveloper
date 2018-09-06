@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <title>Shore Solutions</title>
+</head>
+<body>
+  <h3>List of Users</h3>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>UserName</th>
+      <th>Created On</th>
+    </tr>
+
+    <% for(var i=0; i<users.length; i++) {%>
+      <tr>
+        <td><%= users[i]._id %></td>
+        <td><%= users[i].userName %></td>
+        <td><%= users[i].createdOn %></td>
+      </tr>
+    <% } %>
+  </table>
+</body>
+</html>
